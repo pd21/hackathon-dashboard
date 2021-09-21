@@ -1,16 +1,13 @@
-import './App.css';
-import Card from './components/card'
+import "./App.css";
+import Card from "./components/card";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Learn React
-          </p>
-          <Card />
-      </header>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <Card />
+    </DndProvider>
   );
 }
 
